@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Fira Code:size=14:antialias=true:autohint=true";
+static int borderpx = 1;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -93,35 +93,30 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/* DRACULA COLORSCHEME */
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#21222c", // dark0
+	"#ff5555", // red
+	"#50fa7b", // green
+	"#f1fa8c", // yellow
+	"#bd93f9", // blue
+	"#ff79c6", // purple
+	"#8be9fd", // aqua
+	"#f8f8f2", // light4
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#6272a4", // gray
+	"#ff6e6e", // bright_red
+	"#69ff94", // bright_green
+	"#ffffa5", // bright_yellow
+	"#d6acff", // bright_blue
+	"#ff92df", // bright_purple
+	"#a4ffff", // faded_aqua
+	"#ffffff", // bright_light1
 };
-
 
 /*
  * Default colors (colorname index)
@@ -129,8 +124,8 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 0;
 
 /*
  * Default shape of cursor
